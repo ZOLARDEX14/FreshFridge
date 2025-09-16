@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fridge_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EAF6FF"
+    android:padding="16dp">
+
+    <!-- ช่องแช่แข็ง -->
+    <TextView
+        android:id="@+id/tv_freezer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ช่องแช่แข็ง"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="#D0E6F9" />
+
+    <!-- ชั้น 1 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ชั้น 1"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/shelf1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#10FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/item_milk"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="milk"
+            android:src="@drawable/ic_milk" />
+    </LinearLayout>
+
+    <!-- ชั้น 2 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ชั้น 2"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/shelf2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#10FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/item_carrot"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="carrot"
+            android:src="@drawable/ic_carrot" />
+    </LinearLayout>
+
+    <!-- ช่องล่าง -->
+    <LinearLayout
+        android:id="@+id/bottom_section"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:background="#10FFFFFF"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:id="@+id/bottom_left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#20CCCCCC" >
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bottom_right"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#20CCCCCC"
+            android:layout_marginStart="8dp">
+
+            <ImageView
+                android:id="@+id/item_meat"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="meat"
+                android:src="@drawable/ic_meat" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- แถบวัตถุดิบด้านล่าง -->
+    <LinearLayout
+        android:id="@+id/item_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/item_lettuce"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="lettuce"
+            android:src="@drawable/ic_lettuce" />
+
+    </LinearLayout>
+</LinearLayout>

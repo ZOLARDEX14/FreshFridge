@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#EAF6FF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- หัวข้อ -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:text="FreshFridge"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#224466"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- แถบแจ้งเตือน -->
+    <TextView
+        android:id="@+id/tv_expiry_warning"
+        android:visibility="gone"
+        android:text="⚠️ ของบางอย่างใกล้หมดอายุ!"
+        android:textColor="#C85B27"
+        android:background="#FFF3CD"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- หัวข้อรายการ -->
+    <TextView
+        android:layout_marginTop="16dp"
+        android:text="รายการในตู้เย็น"
+        android:textStyle="bold"
+        android:textColor="#224466"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- ปุ่มลอย 3 อัน -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add"
+            android:src="@android:drawable/ic_input_add"
+            android:tint="#FFFFFF"
+            app:backgroundTint="#007BFF"
+            android:layout_marginEnd="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_planner"
+            android:src="@android:drawable/ic_menu_my_calendar"
+            android:tint="#FFFFFF"
+            app:backgroundTint="#28A745"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_fridge"
+            android:src="@android:drawable/ic_menu_view"
+            android:tint="#FFFFFF"
+            app:backgroundTint="#FF9800"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
